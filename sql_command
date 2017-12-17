@@ -1,7 +1,7 @@
 # insert sql command
 
 INSERT INTO `typecho_contents` (`title`, `slug`, `created`, `modified`, `text`, `order`, `authorId`, `template`, `type`, `status`, `password`, `commentsNum`, `allowComment`, `allowPing`, `allowFeed`, `parent`, `views`)
-VALUES ('test5', NULL, '0', '0', '<!--markdown-->test6![test6][1]  \r\n\r\n[1]:http://tumhot.com/typecho/usr/uploads/2017/12/August042017at0245PM.jpg', '0', '1', NULL, 'post', 'publish', NULL, '0', '0', '0', '0', '0', '0');
+VALUES ('test5', NULL, '0', '0', '<!--markdown-->test6 ![inset_img_1_here][1]  \r\n\r\n[1]:http://tumhot.com/typecho/usr/uploads/2017/12/August042017at0245PM.jpg', '0', '1', NULL, 'post', 'publish', NULL, '0', '0', '0', '0', '0', '0');
 
 #update sql command
 
