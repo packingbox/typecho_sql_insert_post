@@ -1,0 +1,39 @@
+# insert sql command
+
+INSERT INTO `typecho_contents` (`title`, `slug`, `created`, `modified`, `text`, `order`, `authorId`, `template`, `type`, `status`, `password`, `commentsNum`, `allowComment`, `allowPing`, `allowFeed`, `parent`, `views`)
+VALUES ('test5', NULL, '0', '0', 'test5', '0', '1', NULL, 'post', 'publish', NULL, '0', '0', '0', '0', '0', '0');
+
+#update sql command
+
+UPDATE `typecho_contents` SET
+`cid` = '5',
+`title` = 'test2',
+`slug` = '',
+`created` = '1513527605',
+`modified` = '0',
+`text` = 'test2',
+`order` = '0',
+`authorId` = '1',
+`template` = NULL,
+`type` = 'post',
+`status` = 'publish',
+`password` = NULL,
+`commentsNum` = '0',
+`allowComment` = '1',
+`allowPing` = '1',
+`allowFeed` = '1',
+`parent` = '0',
+`views` = '0'
+WHERE `cid` = '5';
+
+# bash insert command
+# My txt file looks like this:
+# 10.16.54.29 00:f8:e5:33:22:3f marsara
+
+#!/bin/bash
+inputfile="test.txt"
+cat $inputfile | while read ip mac server; do
+    echo "INSERT INTO test (IP,MAC,SERVER) VALUES ('$ip', '$mac', '$server');"
+done | mysql -uroot -ptest test;
+
+#This way you streaming the file read as well the mysql comand execution.
